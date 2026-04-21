@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import JarvisAssistant from "./Jarvis.jsx";
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 const parsePnl = (str) => {
@@ -1708,6 +1709,15 @@ export default function TradingJournal() {
         )}
 
       </div>
+
+      <JarvisAssistant
+        trades={trades}
+        accountStatuses={accountStatuses}
+        accountPayouts={accountPayouts}
+        accountChallenges={accountChallenges}
+        accountSizes={accountSizes}
+        accountTypes={accountTypes}
+      />
 
       <style>{`
         @keyframes fadeIn { from { opacity:0; transform:translateY(-5px); } to { opacity:1; transform:none; } }
